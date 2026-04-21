@@ -19,7 +19,7 @@ A multiplayer-focused PvP shield system for Project Zomboid (Build 42).
 - Regen rate and regen delay are configurable.
 
 [h2]Balance Update[/h2]
-To keep this system viable on PvP servers, crafting cost was increased by 10x:
+To make your PvP shield:
 - Electronics Scrap: 30
 - Sheet Metal: 20
 - Duct Tape: 10
@@ -27,3 +27,4 @@ To keep this system viable on PvP servers, crafting cost was increased by 10x:
 [h2]Notes[/h2]
 - Optimized client/server synchronization for multiplayer.
 - Includes an in-game shield HUD for current shield HP tracking.
+- Mod in development
