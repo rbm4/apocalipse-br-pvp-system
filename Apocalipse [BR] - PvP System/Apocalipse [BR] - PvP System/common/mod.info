@@ -1,0 +1,9 @@
+name=ApocalipseBR - PvP System
+author=Hypothetic
+poster=poster.png
+icon=icon.png
+id=Apoc_PvP_system
+modversion=1.0
+versionMin=42.15
+description=<RGB:0.2,1,0.3>Adds a multiplayer-focused PvP Shield system: equip a head-slot shield to absorb incoming player damage, drain shield HP on blocked hits, and regenerate HP only after an out-of-combat delay. Includes configurable max HP/regen settings and optimized client-server synchronization.
+url=https://apocalipse.cloud/

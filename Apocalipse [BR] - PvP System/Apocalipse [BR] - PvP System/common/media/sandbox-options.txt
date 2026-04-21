@@ -1,0 +1,39 @@
+VERSION = 1,
+
+option ApocalipseBR.ShieldEnabled
+{
+    type = boolean,
+    default = true,
+    page = ApocalipseBR,
+    translation = Sandbox_ApocalipseBR_ShieldEnabled,
+}
+
+option ApocalipseBR.ShieldMaxHP
+{
+    type = integer,
+    default = 50,
+    min = 10,
+    max = 500,
+    page = ApocalipseBR,
+    translation = Sandbox_ApocalipseBR_ShieldMaxHP,
+}
+
+option ApocalipseBR.ShieldRegenRate
+{
+    type = double,
+    default = 2.0,
+    min = 0.0,
+    max = 50.0,
+    page = ApocalipseBR,
+    translation = Sandbox_ApocalipseBR_ShieldRegenRate,
+}
+
+option ApocalipseBR.ShieldRegenDelay
+{
+    type = integer,
+    default = 8,
+    min = 1,
+    max = 60,
+    page = ApocalipseBR,
+    translation = Sandbox_ApocalipseBR_ShieldRegenDelay,
+}

@@ -1,0 +1,35 @@
+module ApocalipseBR
+{
+    item PvPShield_Basic
+    {
+        DisplayName = Basic PvP Shield,
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        BodyLocation = Hat,
+        Weight = 1.0,
+        Icon = Hat_HardHat,
+        ConditionMax = 10,
+        ConditionLowerChanceOneIn = 10000,
+    }
+
+    craftRecipe MakeBasicPvPShield
+    {
+        time = 300,
+        timedAction = Craft,
+        category = Survivalist,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Electrical:2,
+        xpAward = Electrical:25,
+        NeedToBeLearn = false,
+        inputs
+        {
+            item 30 [Base.ElectronicsScrap] mode:destroy,
+            item 20 [Base.SheetMetal] mode:destroy,
+            item 10 [Base.DuctTape] mode:destroy,
+        }
+        outputs
+        {
+            item 1 ApocalipseBR.PvPShield_Basic,
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Konijima/project-zomboid-studio/master/pzstudio.schema.json",
+    "title": "Apocalipse [BR] - PvP System",
+    "authors": ["Hypothetic"],
+    "workshop": {
+        "visibility": "public",
+        "tags": [
+            "Build 42"
+        ],
+        "excludes": []
+    },
+    "mods": {
+        "Apocalipse [BR] - PvP System": {
+            "name": "Apocalipse [BR] - PvP System",
+            "description": "Multiplayer PvP shield system with configurable max HP, out-of-combat regeneration, and head-slot shield equipment for Build 42."
+        }
+    }
+}

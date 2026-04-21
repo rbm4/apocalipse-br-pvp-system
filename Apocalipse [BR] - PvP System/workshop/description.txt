@@ -1,0 +1,29 @@
+[h1]Apocalipse [BR] - PvP System[/h1]
+
+A multiplayer-focused PvP shield system for Project Zomboid (Build 42).
+
+[h2]How It Works[/h2]
+- Craft and equip the Basic PvP Shield in the head slot.
+- While shield HP is above zero, incoming player-vs-player hit damage is absorbed by the shield instead of your character.
+- Each blocked hit reduces shield HP.
+- If shield HP reaches zero, protection ends until HP is restored.
+
+[h2]Out-of-Combat Regeneration[/h2]
+- Shield regeneration starts only after you stay out of combat for the configured delay.
+- Regeneration then restores shield HP every second based on the configured regen rate.
+- Regen pauses again as soon as you take another PvP hit.
+
+[h2]Server/Sandbox Control[/h2]
+- Shield system can be enabled/disabled.
+- Max shield HP can be customized.
+- Regen rate and regen delay are configurable.
+
+[h2]Balance Update[/h2]
+To keep this system viable on PvP servers, crafting cost was increased by 10x:
+- Electronics Scrap: 30
+- Sheet Metal: 20
+- Duct Tape: 10
+
+[h2]Notes[/h2]
+- Optimized client/server synchronization for multiplayer.
+- Includes an in-game shield HUD for current shield HP tracking.
