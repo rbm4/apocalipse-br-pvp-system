@@ -71,6 +71,24 @@ function PvPShieldConfig.isEnabled()
     return true
 end
 
+--- Check if shield HUD should be rendered
+---@return boolean
+function PvPShieldConfig.isHUDEnabled()
+    if SandboxVars and SandboxVars.ApocalipseBR and SandboxVars.ApocalipseBR.ShieldHUDEnabled ~= nil then
+        return SandboxVars.ApocalipseBR.ShieldHUDEnabled
+    end
+    return true
+end
+
+--- Check if shield regen pulse effect should be rendered
+---@return boolean
+function PvPShieldConfig.isPulseEnabled()
+    if SandboxVars and SandboxVars.ApocalipseBR and SandboxVars.ApocalipseBR.ShieldPulseEnabled ~= nil then
+        return SandboxVars.ApocalipseBR.ShieldPulseEnabled
+    end
+    return true
+end
+
 --- Initialize a shield item's modData if not already set
 ---@param item InventoryItem
 ---@return number hp, number maxHp

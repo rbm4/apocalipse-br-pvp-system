@@ -37,3 +37,19 @@ option ApocalipseBR.ShieldRegenDelay
     page = ApocalipseBR,
     translation = Sandbox_ApocalipseBR_ShieldRegenDelay,
 }
+
+option ApocalipseBR.ShieldHUDEnabled
+{
+    type = boolean,
+    default = true,
+    page = ApocalipseBR,
+    translation = Sandbox_ApocalipseBR_ShieldHUDEnabled,
+}
+
+option ApocalipseBR.ShieldPulseEnabled
+{
+    type = boolean,
+    default = true,
+    page = ApocalipseBR,
+    translation = Sandbox_ApocalipseBR_ShieldPulseEnabled,
+}

@@ -19,6 +19,15 @@ PvPShieldClient.state = {
 -- Track head item type to detect equip/unequip changes
 local lastHeadItemType      = nil
 local requestedInitialState = false
+local lastStateRequestSec   = -1
+
+local function requestStateThrottled(player)
+    if not player then return end
+    local now = os.time()
+    if now == lastStateRequestSec then return end
+    lastStateRequestSec = now
+    sendClientCommand(player, PvPShieldConfig.NET_MODULE, "RequestState", {})
+end
 
 ---------------------------------------------------------------------------
 -- Shield HUD panel
@@ -37,6 +46,7 @@ end
 
 function PvPShieldHUD:render()
     local s = PvPShieldClient.state
+    if PvPShieldConfig.isHUDEnabled and not PvPShieldConfig.isHUDEnabled() then return end
     if not s.hasShield or s.maxHp <= 0 then return end
 
     local barW = self.width
@@ -50,8 +60,12 @@ function PvPShieldHUD:render()
     -- Fill bar (cyan/blue for active, dim when depleted)
     if s.hp > 0 then
         if s.isRegenerating then
-            -- Pulsing alpha during regen
-            local pulse = 0.6 + 0.3 * math.sin(os.clock() * 4)
+            -- Use a tick-based pulse to avoid per-frame trig calls.
+            local pulse = 0.8
+            if PvPShieldConfig.isPulseEnabled and PvPShieldConfig.isPulseEnabled() then
+                local t = getTimestampMs and getTimestampMs() or 0
+                pulse = ((math.floor(t / 180) % 2) == 0) and 0.9 or 0.6
+            end
             self:drawRect(0, barY, barW * fillRatio, barH, pulse, 0.15, 0.55, 0.95)
         else
             self:drawRect(0, barY, barW * fillRatio, barH, 0.85, 0.15, 0.55, 0.95)
@@ -109,11 +123,11 @@ local function updateShieldState(hp, maxHp)
 end
 
 --- SP-only: read shield state directly from the equipped item's modData
-local function pollShieldStateSP()
-    local player = getSpecificPlayer(0)
+local function pollShieldStateSP(player, headItem)
+    player = player or getSpecificPlayer(0)
     if not player then return end
 
-    local headItem = player:getClothingItem_Head()
+    headItem = headItem or player:getClothingItem_Head()
     if not headItem then
         updateShieldState(0, 0)
         return
@@ -238,7 +252,7 @@ local function onTick()
     -- MP: one-time initial state request
     if isClient() and not requestedInitialState then
         requestedInitialState = true
-        sendClientCommand(player, PvPShieldConfig.NET_MODULE, "RequestState", {})
+        requestStateThrottled(player)
     end
 
     -- Throttle main logic to once per second
@@ -253,22 +267,22 @@ local function onTick()
     if currentType ~= lastHeadItemType then
         lastHeadItemType = currentType
         if isClient() then
-            sendClientCommand(player, PvPShieldConfig.NET_MODULE, "RequestState", {})
+            requestStateThrottled(player)
         else
-            pollShieldStateSP()
+            pollShieldStateSP(player, headItem)
         end
     end
 
     -- SP: poll item modData periodically
     if not isClient() then
-        pollShieldStateSP()
+        pollShieldStateSP(player, headItem)
     end
 
     -- Process regen heartbeat
     processRegenTick()
 
     -- Ensure HUD exists when shield is active
-    if PvPShieldClient.state.hasShield then
+    if PvPShieldClient.state.hasShield and (not PvPShieldConfig.isHUDEnabled or PvPShieldConfig.isHUDEnabled()) then
         ensureHUD()
     end
 end
