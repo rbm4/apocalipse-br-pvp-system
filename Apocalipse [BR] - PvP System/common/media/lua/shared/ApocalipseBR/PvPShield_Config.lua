@@ -62,6 +62,15 @@ function PvPShieldConfig.getRegenDelay()
     return 8
 end
 
+--- Get minimum shield damage per successful PvP hit
+---@return number
+function PvPShieldConfig.getMinDamagePerHit()
+    if SandboxVars and SandboxVars.ApocalipseBR and SandboxVars.ApocalipseBR.ShieldMinDamagePerHit then
+        return SandboxVars.ApocalipseBR.ShieldMinDamagePerHit
+    end
+    return 3
+end
+
 --- Check if shield system is enabled
 ---@return boolean
 function PvPShieldConfig.isEnabled()

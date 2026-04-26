@@ -4,7 +4,7 @@ module ApocalipseBR
     {
         DisplayCategory = Accessory,
         ItemType = base:clothing,
-        ClothingItem = Hat_CrashHelmet,
+        ClothingItem = Hat_CrashHelmetFULL,
         BodyLocation = base:Hat,
         Weight = 1.0,
         Icon = PVPHelmet_Icon,

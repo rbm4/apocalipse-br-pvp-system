@@ -1,0 +1,17 @@
+{
+    "Sandbox_ApocalipseBR": "Apocalipse BR - PvP-Schild",
+    "Sandbox_ApocalipseBR_ShieldEnabled": "PvP-Schilde aktivieren",
+    "Sandbox_ApocalipseBR_ShieldEnabled_tooltip": "Aktiviert oder deaktiviert das PvP-Schild-System. Wenn deaktiviert, haben ausgerüstete Schilde keinen Effekt.",
+    "Sandbox_ApocalipseBR_ShieldMaxHP": "Maximale LP des Schildes",
+    "Sandbox_ApocalipseBR_ShieldMaxHP_tooltip": "Maximale Lebenspunkte des einfachen PvP-Schildes. Höhere Werte machen Schilde langlebiger.",
+    "Sandbox_ApocalipseBR_ShieldRegenRate": "Schildregeneration (LP/s)",
+    "Sandbox_ApocalipseBR_ShieldRegenRate_tooltip": "Wie viele Lebenspunkte das Schild pro Sekunde außerhalb des Kampfes regeneriert. Auf 0 setzen, um die Regeneration zu deaktivieren.",
+    "Sandbox_ApocalipseBR_ShieldRegenDelay": "Verzögerung der Schildregeneration (Sekunden)",
+    "Sandbox_ApocalipseBR_ShieldRegenDelay_tooltip": "Wie viele Sekunden der Spieler außerhalb des PvP-Kampfes sein muss, bevor das Schild beginnt zu regenerieren.",
+    "Sandbox_ApocalipseBR_ShieldMinDamagePerHit": "Mindestschaden am Schild pro Treffer",
+    "Sandbox_ApocalipseBR_ShieldMinDamagePerHit_tooltip": "Minimale Schildlebenspunkte, die bei jedem erfolgreichen PvP-Treffer entfernt werden.",
+    "Sandbox_ApocalipseBR_ShieldHUDEnabled": "Schild-HUD aktivieren",
+    "Sandbox_ApocalipseBR_ShieldHUDEnabled_tooltip": "Zeigt die Schildstatusleiste auf dem Bildschirm an, wenn ein Schild ausgerüstet ist.",
+    "Sandbox_ApocalipseBR_ShieldPulseEnabled": "Regenerationspulseffekt aktivieren",
+    "Sandbox_ApocalipseBR_ShieldPulseEnabled_tooltip": "Aktiviert den Pulseffekt auf dem Schild-HUD während der Regeneration."
+}

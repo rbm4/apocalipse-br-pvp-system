@@ -1,0 +1,17 @@
+{
+    "Sandbox_ApocalipseBR": "Apocalipse BR - Escudo PvP",
+    "Sandbox_ApocalipseBR_ShieldEnabled": "Ativar Escudos PvP",
+    "Sandbox_ApocalipseBR_ShieldEnabled_tooltip": "Ativa ou desativa o sistema de Escudos PvP. Quando desativado, os escudos equipados não têm efeito.",
+    "Sandbox_ApocalipseBR_ShieldMaxHP": "HP Máximo do Escudo",
+    "Sandbox_ApocalipseBR_ShieldMaxHP_tooltip": "Pontos de vida máximos do Escudo PvP Básico. Valores mais altos fazem os escudos durarem mais.",
+    "Sandbox_ApocalipseBR_ShieldRegenRate": "Taxa de Regeneração do Escudo (HP/s)",
+    "Sandbox_ApocalipseBR_ShieldRegenRate_tooltip": "Quantos pontos de vida o escudo regenera por segundo fora de combate. Defina como 0 para desativar a regeneração.",
+    "Sandbox_ApocalipseBR_ShieldRegenDelay": "Atraso na Regeneração do Escudo (segundos)",
+    "Sandbox_ApocalipseBR_ShieldRegenDelay_tooltip": "Quantos segundos o jogador precisa estar fora de combate PvP antes de o escudo começar a regenerar.",
+    "Sandbox_ApocalipseBR_ShieldMinDamagePerHit": "Dano Mínimo do Escudo por Golpe",
+    "Sandbox_ApocalipseBR_ShieldMinDamagePerHit_tooltip": "HP mínimo do escudo removido a cada golpe PvP bem-sucedido.",
+    "Sandbox_ApocalipseBR_ShieldHUDEnabled": "Ativar HUD do Escudo",
+    "Sandbox_ApocalipseBR_ShieldHUDEnabled_tooltip": "Exibe a barra de status do escudo na tela quando um escudo está equipado.",
+    "Sandbox_ApocalipseBR_ShieldPulseEnabled": "Ativar Efeito de Pulso de Regeneração",
+    "Sandbox_ApocalipseBR_ShieldPulseEnabled_tooltip": "Ativa o efeito de pulso no HUD do escudo durante a regeneração."
+}

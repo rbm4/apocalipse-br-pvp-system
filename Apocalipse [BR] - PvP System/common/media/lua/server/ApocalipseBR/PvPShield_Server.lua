@@ -69,11 +69,16 @@ local function onWeaponHitCharacter(wielder, target, weapon, damageSplit)
     local hp, maxHp = PvPShieldConfig.initializeShieldItem(shieldItem)
     if hp <= 0 then return end
 
-    -- Block the entire hit (sets flag that Java checks immediately after this event)
-    target:setAvoidDamage(true)
+    local shieldDamage = math.max(damageSplit, PvPShieldConfig.getMinDamagePerHit())
+
+    -- Only block the hit when the shield can absorb it completely.
+    -- If the hit breaks the shield, native PvP damage is applied by the game.
+    if hp > shieldDamage then
+        target:setAvoidDamage(true)
+    end
 
     -- Deduct shield HP
-    hp = hp - damageSplit
+    hp = hp - shieldDamage
     if hp < 0 then hp = 0 end
 
     -- Persist on item

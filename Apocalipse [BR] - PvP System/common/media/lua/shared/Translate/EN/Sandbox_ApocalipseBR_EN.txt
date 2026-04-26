@@ -8,4 +8,10 @@ Sandbox_EN = {
     Sandbox_ApocalipseBR_ShieldRegenRate_tooltip = "How many hit points the shield regenerates per second while out of combat. Set to 0 to disable regeneration.",
     Sandbox_ApocalipseBR_ShieldRegenDelay = "Shield Regen Delay (seconds)",
     Sandbox_ApocalipseBR_ShieldRegenDelay_tooltip = "How many seconds the player must be out of PvP combat before the shield starts regenerating.",
+    Sandbox_ApocalipseBR_ShieldMinDamagePerHit = "Minimum Shield Damage Per Hit",
+    Sandbox_ApocalipseBR_ShieldMinDamagePerHit_tooltip = "Minimum shield HP removed by each successful PvP hit.",
+    Sandbox_ApocalipseBR_ShieldHUDEnabled = "Enable Shield HUD",
+    Sandbox_ApocalipseBR_ShieldHUDEnabled_tooltip = "Show the shield status bar on screen when a shield is equipped.",
+    Sandbox_ApocalipseBR_ShieldPulseEnabled = "Enable Regen Pulse Effect",
+    Sandbox_ApocalipseBR_ShieldPulseEnabled_tooltip = "Enable pulsing effect on the shield HUD while regenerating.",
 }

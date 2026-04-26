@@ -31,11 +31,21 @@ option ApocalipseBR.ShieldRegenRate
 option ApocalipseBR.ShieldRegenDelay
 {
     type = integer,
-    default = 8,
+    default = 30,
     min = 1,
-    max = 60,
+    max = 300,
     page = ApocalipseBR,
     translation = Sandbox_ApocalipseBR_ShieldRegenDelay,
+}
+
+option ApocalipseBR.ShieldMinDamagePerHit
+{
+    type = double,
+    default = 3.0,
+    min = 0.1,
+    max = 50.0,
+    page = ApocalipseBR,
+    translation = Sandbox_ApocalipseBR_ShieldMinDamagePerHit,
 }
 
 option ApocalipseBR.ShieldHUDEnabled

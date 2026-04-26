@@ -1,0 +1,17 @@
+{
+    "Sandbox_ApocalipseBR": "Apocalipse BR - ПвП-щит",
+    "Sandbox_ApocalipseBR_ShieldEnabled": "Включить ПвП-щиты",
+    "Sandbox_ApocalipseBR_ShieldEnabled_tooltip": "Включает или отключает систему ПвП-щитов. При отключении экипированные щиты не имеют эффекта.",
+    "Sandbox_ApocalipseBR_ShieldMaxHP": "Макс. HP щита",
+    "Sandbox_ApocalipseBR_ShieldMaxHP_tooltip": "Максимальные очки здоровья базового ПвП-щита. Более высокие значения увеличивают его прочность.",
+    "Sandbox_ApocalipseBR_ShieldRegenRate": "Скорость регенерации щита (HP/с)",
+    "Sandbox_ApocalipseBR_ShieldRegenRate_tooltip": "Сколько очков здоровья щит восстанавливает в секунду вне боя. Установите 0, чтобы отключить регенерацию.",
+    "Sandbox_ApocalipseBR_ShieldRegenDelay": "Задержка регенерации щита (секунды)",
+    "Sandbox_ApocalipseBR_ShieldRegenDelay_tooltip": "Сколько секунд игрок должен быть вне ПвП-боя, прежде чем щит начнёт регенерировать.",
+    "Sandbox_ApocalipseBR_ShieldMinDamagePerHit": "Минимальный урон по щиту за удар",
+    "Sandbox_ApocalipseBR_ShieldMinDamagePerHit_tooltip": "Минимальное количество HP щита, снимаемое каждым успешным ПвП-ударом.",
+    "Sandbox_ApocalipseBR_ShieldHUDEnabled": "Включить HUD щита",
+    "Sandbox_ApocalipseBR_ShieldHUDEnabled_tooltip": "Показывает полосу состояния щита на экране, когда экипирован щит.",
+    "Sandbox_ApocalipseBR_ShieldPulseEnabled": "Включить эффект пульса регенерации",
+    "Sandbox_ApocalipseBR_ShieldPulseEnabled_tooltip": "Включает эффект пульсации на HUD щита во время регенерации."
+}
